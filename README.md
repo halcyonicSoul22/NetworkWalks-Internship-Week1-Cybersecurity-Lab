@@ -28,12 +28,12 @@ The following specifications were successfully implemented and verified:
 A NAT Network was created to allow the VM to communicate with the host and external networks while remaining isolated. 
 *   **Network Name:** `NatNetwork`
 *   **IPv4 Prefix:** `10.0.0.0/24`
-*   **DHCP:** Enabled (Note: Kali is configured with a static IP outside the DHCP pool or explicitly set to override it).
+*   **DHCP:** Enabled (Note: Kali is configured with a static IP).
 
 ### 2. Virtual Machine Settings
 *   **Network Adapter:** Attached to `NAT Network` (`NatNetwork`).
 *   **General Settings:** Shared Clipboard and Drag-and-Drop were both set to **Bidirectional**.
-*   **Shared Folders:** The host machine's `Downloads` folder was mapped to the VM with **Auto-mount** and **Make Permanent** enabled.
+*   **Shared Folders:** The host machine's `Downloads` folder was mapped to the VM with **Auto-mount** enabled.
 
 ### 3. Kali Linux Network Configuration
 Instead of relying on DHCP, the Kali Linux network interface (`eth0`) was manually configured via the CLI using `nmcli` to ensure a static IP address for consistent testing.
